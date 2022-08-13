@@ -15,7 +15,7 @@ const puppeteer = require('puppeteer-core');
     executablePath: '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome'
   });
   const page = await browser.newPage();
-  page.goto('https://website/login');
+  page.goto('https://www.google.co.in/');
   await page.screenshot({ path: 'public/image.png' });
   await browser.close();
 })();
