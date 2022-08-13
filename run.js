@@ -14,16 +14,6 @@ const puppeteer = require('puppeteer-core');
     args: [],
     executablePath: '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome'
   });
-
-  const page = await browser.newPage();
-
-  await page.setViewport({
-    width: 400,
-    height: 400,
-    deviceScaleFactor: 1
-  });
-
-  await page.setContent('<h1>Hello World!</h1>', { waitUntil: 'networkidle2' });
   const page = await browser.newPage();
   page.goto('https://website/login');
   await page.screenshot({ path: 'public/image.png' });
