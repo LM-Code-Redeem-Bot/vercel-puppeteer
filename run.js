@@ -23,7 +23,7 @@ const puppeteer = require('puppeteer-core');
     deviceScaleFactor: 1
   });
 
-  await page.setContent('<h1>Hello World!</h1>', { waitUntil: 'networkidle2' });
+  await Promise.All([ page.goto('http://www.google.com'), page.waitForNavigation() ]);
   await page.screenshot({ path: 'public/image.png' });
   await browser.close();
 })();
