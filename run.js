@@ -12,6 +12,6 @@ const puppeteer = require('puppeteer-core');
     executablePath: '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome'
   });
   const page = await browser.newPage();
-  page.goto('https://lordsmobile.igg.com/gifts/');
+//   page.goto('https://lordsmobile.igg.com/gifts/');
   await browser.close();
 })();
